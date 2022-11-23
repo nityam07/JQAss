@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        table{
+            font-size: 24x;
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        tr,th,td{
+            border: 2px solid black;           
+        }
+    </style>
+</head>
+<body>
+    <table id="table">
+        <tr id="r0">
+            <th id="h1">name</th>
+            <th id="h2">reg.no.</th>
+            <th id="h3">section</th>
+        </tr>       
+    </table>
+    <button id="btn1">Click to Add row</button>
+    <br>    
+    <button id="btn2">Change the color of Text</button>
+    <br>
+    <p id="p">Remove Element</p>
+    <input type="text" name="input" id="input">
+    <br>
+    <button id="btn3">Delete</button>
+
+</body>
+
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("#table").append("<tr><td>vidya</td><td>2141010003</td><td>U</td></tr>")
+            a++;
+        });
+        $("#btn2").click(function(){
+            $("tr").css("color","blue");
+        });
+        $("#btn3").click(function(){
+            var val = $("#input").val(1);
+            $("#"+val).remove();
+        });
+    });
+</script>
+</html>
